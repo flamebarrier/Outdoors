@@ -1,0 +1,56 @@
+.btn {
+    &--white {
+        background-color: $color-white;
+        color: $color-grey;
+    
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &:link,
+    &:visited {
+        display: block;
+        width: 30rem;
+        padding: 1.5rem 4rem;
+        border-radius: 5rem;
+        font-size: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    &--animated {
+        position: relative;
+        margin: 10rem auto 0;
+        animation: moveCtaBtn 0.7s ease-out;
+        transition: all 0.2s ease;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        display: inline-block;
+        border-radius: 5rem;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+    
+    &:hover {
+        transform: translateY(-.5rem);
+        box-shadow: 0 .5rem 1.5rem rgba($color-black, 0.589);
+        
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-.3rem);
+        box-shadow: 0 .3rem 1rem rgba($color-black, 0.541);
+    }
+}
