@@ -18,7 +18,7 @@ body {
         font-size: 8rem;
         font-weight: 400;
         letter-spacing: 3rem;
-        animation: movePrimaryMain 0.7s ease-out;
+        animation: movePrimaryMain 1.3s ease-out;
     }
     
     &--sub {
@@ -26,6 +26,38 @@ body {
         font-weight: 700;
         font-size: 3rem;
         letter-spacing: 1.57rem;
-        animation: movePrimarySub 0.7s ease-out;
+        animation: movePrimarySub 1.3s ease-out;
     }
+}
+
+.heading-secondary {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+    -webkit-background-clip: text;
+    letter-spacing: 2px;
+    color: transparent;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(3deg) skewX(5deg) scale(1.05);
+        text-shadow: .5rem .5rem 2rem rgba($color-black, 0.212);
+    }
+}
+
+.heading-tertiary {
+    color: $color-grey;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.paragraph {
+    color: $color-grey;
+    font-size: 2rem;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
 }

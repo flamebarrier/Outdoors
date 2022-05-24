@@ -17,11 +17,11 @@ body {
 /* ------------------------Primary heading and cta animations------------------------- */
 @keyframes movePrimaryMain {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-25%);
     opacity: 0;
   }
   80% {
-    transform: translateX(10%);
+    transform: translateX(5%);
     opacity: 1;
   }
   100% {
@@ -30,11 +30,11 @@ body {
 }
 @keyframes movePrimarySub {
   0% {
-    transform: translateX(100%);
+    transform: translateX(25%);
     opacity: 0;
   }
   80% {
-    transform: translateX(-10%);
+    transform: translateX(-5%);
     opacity: 1;
   }
   100% {
@@ -43,11 +43,11 @@ body {
 }
 @keyframes moveCtaBtn {
   0% {
-    transform: translateY(200%);
+    transform: translateY(50%);
     opacity: 0;
   }
   80% {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
     opacity: 1;
   }
   100% {
@@ -74,19 +74,64 @@ body {
   font-size: 8rem;
   font-weight: 400;
   letter-spacing: 3rem;
-  animation: movePrimaryMain 0.7s ease-out;
+  animation: movePrimaryMain 1.3s ease-out;
 }
 .heading-primary--sub {
   display: block;
   font-weight: 700;
   font-size: 3rem;
   letter-spacing: 1.57rem;
-  animation: movePrimarySub 0.7s ease-out;
+  animation: movePrimarySub 1.3s ease-out;
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(3deg) skewX(5deg) scale(1.05);
+  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.212);
+}
+
+.heading-tertiary {
+  color: #777;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.paragraph {
+  color: #777;
+  font-size: 2rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
 }
 
 .btn--white {
   background-color: #fff;
-  color: #666;
+  color: #777;
 }
 .btn--white::after {
   background-color: #fff;
@@ -103,7 +148,7 @@ body {
 .btn--animated {
   position: relative;
   margin: 10rem auto 0;
-  animation: moveCtaBtn 0.7s ease-out;
+  animation: moveCtaBtn 1s ease-out;
   transition: all 0.2s ease;
 }
 .btn::after {
@@ -131,11 +176,35 @@ body {
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.541);
 }
 
+.btn-text:link,
+.btn-text:visited {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #55c57a;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+}
+.btn-text:link:hover,
+.btn-text:visited:hover {
+  transform: translateY(-2px);
+  background-color: #55c57a;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn-text:link:active,
+.btn-text:visited:active {
+  transform: translateY(0px);
+  box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
 /* --------------------Header styling--------------------- */
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right, #7ed56f, #28b485), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.3), rgba(40, 180, 133, 0.5)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -158,7 +227,6 @@ body {
 
 .row {
   color: #000;
-  background-color: #666;
   max-width: 114rem;
   margin: 0 auto;
 }
@@ -171,7 +239,6 @@ body {
   clear: both;
 }
 .row [class^=col] {
-  background-color: orangered;
   float: left;
 }
 .row [class^=col]:not(:last-child) {
@@ -194,4 +261,10 @@ body {
 }
 .row .col3of4 {
   width: calc(12rem + 3 * (100% - 6rem * 3) / 4);
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  margin-top: -15vh;
+  padding: 25vh 0;
 }

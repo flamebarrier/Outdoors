@@ -2,12 +2,12 @@
 
 @keyframes movePrimaryMain {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-25%);
         opacity: 0;
     }
 
     80% {
-        transform: translateX(10%);
+        transform: translateX(5%);
         opacity: 1;
     }
 
@@ -18,12 +18,12 @@
 
 @keyframes movePrimarySub {
     0% {
-        transform: translateX(100%);
+        transform: translateX(25%);
         opacity: 0;
     }
 
     80% {
-        transform: translateX(-10%);
+        transform: translateX(-5%);
         opacity: 1;
     }
 
@@ -34,12 +34,12 @@
 
 @keyframes moveCtaBtn {
     0% {
-        transform: translateY(200%);
+        transform: translateY(50%);
         opacity: 0;
     }
 
     80% {
-        transform: translateY(-10%);
+        transform: translateY(-5%);
         opacity: 1;
     }
 

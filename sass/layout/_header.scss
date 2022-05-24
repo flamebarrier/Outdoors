@@ -4,9 +4,10 @@
     position: relative;
     height: 95vh;
     background-image: linear-gradient(
-        to right,
-        $color-primary-light,
-        $color-primary-dark),
+        to right bottom,
+        rgba($color-primary-light, 0.3),
+        rgba($color-primary-dark, 0.5)
+        ),
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
