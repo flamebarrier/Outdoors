@@ -85,7 +85,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
@@ -102,12 +102,12 @@ body {
 .heading-tertiary {
   color: #777;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .paragraph {
   color: #777;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 30px;
@@ -179,7 +179,7 @@ body {
 .btn-text:link,
 .btn-text:visited {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-decoration: none;
   color: #55c57a;
   padding: 3px;
@@ -252,6 +252,30 @@ body {
   transform: scale(0.95);
 }
 
+.feature-box {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #777;
+  font-size: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+.feature-box__icon {
+  font-size: 6rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box h3 {
+  font-size: 1.6rem;
+}
+.feature-box:hover {
+  transform: translateY(-1rem) scale(1.05);
+  box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.2);
+}
+
 /* --------------------Header styling--------------------- */
 .header {
   position: relative;
@@ -319,4 +343,16 @@ body {
   background-color: #f7f7f7;
   margin-top: -15vh;
   padding: 25vh 0;
+}
+
+.section-features {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.3), rgba(40, 180, 133, 0.5)), url(../img/nat-4.jpg);
+  padding: 20vh 0;
+  margin-top: -11rem;
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-5deg);
+}
+.section-features > * {
+  transform: skewY(5deg);
 }
