@@ -200,6 +200,58 @@ body {
   box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 55%;
+  border-radius: 4px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  position: absolute;
+  outline-offset: 2px;
+  transition: all 0.2s;
+}
+.composition__photo--p1 {
+  top: -2rem;
+  left: 0;
+}
+.composition__photo--p1:hover {
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1.05) translateY(-0.5rem);
+  outline: 4px solid #55c57a;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.composition__photo--p1:hover .composition__photo--p2,
+.composition__photo--p1:hover .composition__photo--p3 {
+  transform: scale(0.95);
+}
+.composition__photo--p2 {
+  top: 15rem;
+  left: 20%;
+}
+.composition__photo--p2:hover {
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1.05) translateY(-0.5rem);
+  outline: 4px solid #55c57a;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.composition__photo--p3 {
+  top: 2rem;
+  left: 50%;
+}
+.composition__photo--p3:hover {
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1.05) translateY(-0.5rem);
+  outline: 4px solid #55c57a;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
 /* --------------------Header styling--------------------- */
 .header {
   position: relative;
