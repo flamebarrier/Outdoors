@@ -8,9 +8,18 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
     &:link,
     &:visited {
-        display: block;
+        display: inline-block;
         width: 30rem;
         padding: 1.5rem 4rem;
         border-radius: 5rem;
@@ -31,7 +40,7 @@
         position: absolute;
         top: 0rem;
         left: 0rem;
-        display: inline-block;
+        display: block;
         border-radius: 5rem;
         height: 100%;
         width: 100%;
